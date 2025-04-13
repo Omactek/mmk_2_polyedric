@@ -17,11 +17,11 @@ R = R/M;
 % Boundaries points
 run("define_boundary_points.m");
 
-% Face 1 [A, B, C, D, E, A]
+% Face 01 [A, B, C, D, E, A]
 % Graticule params
 umin = Au - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
-vmin = -deg_to_rad(180); % West of the westernmost point
+vmin = - deg_to_rad(180); % West of the westernmost point
 vmax = deg_to_rad(180); % East of the easternmost point
 
 uk = deg_to_rad(90); % Lat of the cartographic pole
@@ -33,7 +33,7 @@ vb = [Av, Bv, Cv, Dv, Ev, Av];
 subplot(3, 4, 1);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
 
-% Face 2 [A, F, G, H, B, A]
+% Face 02 [A, F, G, H, B, A]
 % Graticule params
 umin = Gu - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
@@ -49,7 +49,7 @@ vb = [Av, Fv, Gv, Hv, Bv, Av];
 subplot(3, 4, 2);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
 
-% Face 3 [B, H, I, J, C, B]
+% Face 03 [B, H, I, J, C, B]
 % Graticule params
 umin = Iu - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
@@ -65,7 +65,7 @@ vb = [Bv, Hv, Iv, Jv, Cv, Bv];
 subplot(3, 4, 3);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
 
-% Face 4 [C, J, K, L, D, C]
+% Face 04 [C, J, K, L, D, C]
 % Graticule params
 umin = Ku - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
@@ -81,7 +81,7 @@ vb = [Cv, Jv, Kv, Lv, Dv, Cv];
 subplot(3, 4, 4);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
 
-% Face 5 [D, L, M, N, E, D]
+% Face 05 [D, L, M, N, E, D]
 % Graticule params
 umin = Mu - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
@@ -97,7 +97,7 @@ vb = [Dv, Lv, Mv, Nv, Ev, Dv];
 subplot(3, 4, 5);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
 
-% Face 6 [E, N, O, F, A, E]
+% Face 06 [E, N, O, F, A, E]
 % Graticule params
 umin = Ou - deg_to_rad(5); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
@@ -111,4 +111,100 @@ ub = [Eu, Nu, Ou, Fu, Au, Eu];
 vb = [Ev, Nv, Ov, Fv, Av, Ev];
 
 subplot(3, 4, 6);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 07 [H, G, P, Q, I, H]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Hu + deg_to_rad(5); % North of the northernmost point 
+vmin = Gv - deg_to_rad(5); % West of the westernmost point
+vmax = Iv + deg_to_rad(5); % East of the easternmost point
+
+uk = u1_s; % Lat of the cartographic pole
+vk = Hv; % Long of the cartographic pole
+
+ub = [Hu, Gu, Pu, Qu, Iu, Hu];
+vb = [Hv, Gv, Pv, Qv, Iv, Hv];
+
+subplot(3, 4, 7);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 08 [J, I, Q, R, K, J]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Ju + deg_to_rad(5); % North of the northernmost point 
+vmin = Iv - deg_to_rad(5); % West of the westernmost point
+vmax = Kv + deg_to_rad(5); % East of the easternmost point
+
+uk = u1_s; % Lat of the cartographic pole
+vk = Jv; % Long of the cartographic pole
+
+ub = [Ju, Iu, Qu, Ru, Ku, Ju];
+vb = [Jv, Iv, Qv, Rv, Kv, Jv];
+
+subplot(3, 4, 8);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 09 [L, K, R, S, M, L]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Lu + deg_to_rad(5); % North of the northernmost point 
+vmin = Kv - deg_to_rad(5); % West of the westernmost point
+vmax = Mv + deg_to_rad(5); % East of the easternmost point
+
+uk = u1_s; % Lat of the cartographic pole
+vk = Lv; % Long of the cartographic pole
+
+ub = [Lu, Ku, Ru, Su, Mu, Lu];
+vb = [Lv, Kv, Rv, Sv, Mv, Lv];
+
+subplot(3, 4, 9);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 10 [N, M, S, T, O, N]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Nu + deg_to_rad(5); % North of the northernmost point 
+vmin = Mv - deg_to_rad(5); % West of the westernmost point
+vmax = Ov + deg_to_rad(5); % East of the easternmost point
+
+uk = u1_s; % Lat of the cartographic pole
+vk = Nv; % Long of the cartographic pole
+
+ub = [Nu, Mu, Su, Tu, Ou, Nu];
+vb = [Nv, Mv, Sv, Tv, Ov, Nv];
+
+subplot(3, 4, 10);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 11 [F, O, T, P, G, F]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Fu + deg_to_rad(5); % North of the northernmost point 
+vmin = Ov - deg_to_rad(5); % West of the westernmost point
+vmax = Ov + deg_to_rad(72) + deg_to_rad(5); % East of the easternmost point
+
+uk = u1_s; % Lat of the cartographic pole
+vk = Fv; % Long of the cartographic pole
+
+ub = [Fu, Ou, Tu, Pu, Gu, Fu];
+vb = [Fv, Ov, Tv, Pv, Gv, Fv];
+
+subplot(3, 4, 11);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
+% Face 12 [T, S, R, Q, P, T]
+% Graticule params
+umin = - deg_to_rad(90); % South of the southernmost point
+umax = Pu + deg_to_rad(5); % North of the northernmost point
+vmin = - deg_to_rad(180); % West of the westernmost point
+vmax = deg_to_rad(180); % East of the easternmost point
+
+uk = - deg_to_rad(90); % Lat of the cartographic pole
+vk = deg_to_rad(0); % Long of the cartographic pole
+
+ub = [Tu, Su, Ru, Qu, Pu, Tu];
+vb = [Tv, Sv, Rv, Qv, Pv, Tv];
+
+subplot(3, 4, 12);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
