@@ -5,10 +5,10 @@ clear
 file = 'continents_points/eur.txt';
 proj = @gnom;
 s0 = 0; % Might not be needed
-Du = 10 *pi/180;
-Dv = Du;
-du = pi/180;
-dv = du;
+spac_u = deg_to_rad(10);
+spac_v = spac_u ;
+dens_u = deg_to_rad(1);
+dens_v = dens_u;
 M = 50000000; % Needs adjustement
 R = 6380*1000;
 R = R/M;
@@ -31,4 +31,5 @@ ub = [Au, Bu, Cu, Du, Eu, Au];
 vb = [Av, Bv, Cv, Dv, Ev, Av];
 
 subplot(3, 4, 1);
-globeFace(umin, umax, vmin, vmax, Du, Dv, du, dv, R, uk, vk, s0, proj, ub, vb);
+globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+
