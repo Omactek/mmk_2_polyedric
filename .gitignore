@@ -6,6 +6,7 @@
 *.asv
 continents_points/
 continents_2/
+boundary_test.m
 
 # OSX / *nix default autosave extension
 *.m~
