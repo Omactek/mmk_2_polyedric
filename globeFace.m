@@ -3,8 +3,8 @@ function [] = globeFace(umin, umax, vmin, vmax, Du, Dv, du, dv, R, uk, vk, s0, p
     axis equal;
     
     % Background
-    backgroundColor = [0.15, 0.60, 0.83];
-    transpValue = 0.15;
+    backgroundColor = [0.0, 0.0, 1.0];
+    transpValue = 0.12;
 
 
     % Draw background
@@ -22,8 +22,8 @@ function [] = globeFace(umin, umax, vmin, vmax, Du, Dv, du, dv, R, uk, vk, s0, p
     
 
     % Draw parametres of continets
-    fillColor = [0.4660, 0.6740, 0.1880];
-    edgeColor = [0.10, 0.25, 0.01];
+    fillColor = [0.87, 0.72, 0.53];
+    edgeColor = [0.65, 0.16, 0.16];
     transpValue = 0.20;
 
     % Draw - euroasia
