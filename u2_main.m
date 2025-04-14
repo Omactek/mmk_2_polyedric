@@ -9,10 +9,11 @@ spac_u = deg_to_rad(10);
 spac_v = spac_u ;
 dens_u = deg_to_rad(1);
 dens_v = dens_u;
-M = 100000000; % Needs adjustement
+%M = 100000000; % Needs adjustement
 R = 6380*1000;
-R = R/M;
-%M = R/Rt probably around 159500000
+Rt = 0.04;
+M = R/Rt; % Probably around 159500000
+R = Rt;
 
 % Boundaries points
 run("define_boundary_points.m");
