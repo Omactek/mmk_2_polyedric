@@ -15,7 +15,6 @@ R = 6380*1000;
 Rt = 0.0375;
 M = R/Rt; % Probably around 170000000
 R = Rt;
-M = 50000000
 
 
 % Boundaries points
