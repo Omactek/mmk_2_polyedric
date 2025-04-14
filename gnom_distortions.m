@@ -44,8 +44,8 @@ A = atan2(p, mp2-mr2);
 A = simplify (A, 'Steps', 50);
 
 %Numeric computations
-un = 35.2644 * pi/180;
-vn = 10* pi/180;
+un = deg_to_rad(52.6226);
+vn = deg_to_rad(0);
 Rn = 6371;
 
 %Coordinates
@@ -84,18 +84,18 @@ scale = 1000;
 [xt, yt] = elipse_Tissot(scale*an, scale*bn, 0.1, xn, yn, sigman-A1ne);
 
 %Graticule
-umin = 30 *pi/180;
-umax = pi/2;
-vmin = 0;
-vmax = 2*pi;
+umin = deg_to_rad(40); % South of the southernmost point
+umax = deg_to_rad(90); % North of the northernmost point
+vmin = - deg_to_rad(0); % West of the westernmost point
+vmax = deg_to_rad(360); % East of the easternmost point
 
 Du = 10*pi/180;
 Dv = Du;
 du = pi/180;
 dv = du;
 
-uk = pi/2;
-vk = 0;
+uk = deg_to_rad(90); % Lat of the cartographic pole
+vk = deg_to_rad(0); % Long of the cartographic pole
 
 proj = @gnom;
 u0 = 0;

@@ -11,20 +11,22 @@ dens_u = deg_to_rad(1);
 dens_v = dens_u;
 %M = 100000000; % Needs adjustement
 R = 6380*1000;
-% height of dodecahedron = 7.5 cm
+% Height of dodecahedron = 7.5 cm
 Rt = 0.0375;
-M = R/Rt; % Probably around 159500000
+M = R/Rt; % Probably around 170000000
 R = Rt;
+M = 50000000
+
 
 % Boundaries points
 run("define_boundary_points.m");
 
 % Face 01 [A, B, C, D, E, A]
 % Graticule params
-umin = Au - deg_to_rad(5); % South of the southernmost point
+umin = deg_to_rad(40); % South of the southernmost point
 umax = deg_to_rad(90); % North of the northernmost point
-vmin = - deg_to_rad(180); % West of the westernmost point
-vmax = deg_to_rad(180); % East of the easternmost point
+vmin = - deg_to_rad(0); % West of the westernmost point
+vmax = deg_to_rad(360); % East of the easternmost point
 
 uk = deg_to_rad(90); % Lat of the cartographic pole
 vk = deg_to_rad(0); % Long of the cartographic pole
@@ -37,10 +39,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 02 [A, F, G, H, B, A]
 % Graticule params
-umin = Gu - deg_to_rad(5); % South of the southernmost point
-umax = deg_to_rad(90); % North of the northernmost point
-vmin = Av - deg_to_rad(5); % West of the westernmost point
-vmax = Hv + deg_to_rad(5); % East of the easternmost point
+umin = deg_to_rad(-20); % South of the southernmost point
+umax = deg_to_rad(60); % North of the northernmost point
+vmin = deg_to_rad(-10); % West of the westernmost point
+vmax = deg_to_rad(80); % East of the easternmost point
 
 uk = u1_n; % Lat of the cartographic pole
 vk = Gv; % Long of the cartographic pole
@@ -53,10 +55,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 03 [B, H, I, J, C, B]
 % Graticule params
-umin = Iu - deg_to_rad(5); % South of the southernmost point
-umax = deg_to_rad(90); % North of the northernmost point
-vmin = Hv - deg_to_rad(5); % West of the westernmost point
-vmax = Jv + deg_to_rad(5); % East of the easternmost point
+umin = deg_to_rad(-20); % South of the southernmost point
+umax = deg_to_rad(60); % North of the northernmost point
+vmin = deg_to_rad(60); % West of the westernmost point
+vmax = deg_to_rad(150); % East of the easternmost point
 
 uk = u1_n; % Lat of the cartographic pole
 vk = Iv; % Long of the cartographic pole
@@ -69,10 +71,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 04 [C, J, K, L, D, C]
 % Graticule params
-umin = Ku - deg_to_rad(5); % South of the southernmost point
-umax = deg_to_rad(90); % North of the northernmost point
-vmin = Jv - deg_to_rad(5); % West of the westernmost point
-vmax = Lv + deg_to_rad(5); % East of the easternmost point
+umin = deg_to_rad(-20); % South of the southernmost point
+umax = deg_to_rad(60); % North of the northernmost point
+vmin = deg_to_rad(140); % West of the westernmost point
+vmax = deg_to_rad(220); % East of the easternmost point
 
 uk = u1_n; % Lat of the cartographic pole
 vk = Kv; % Long of the cartographic pole
@@ -85,10 +87,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 05 [D, L, M, N, E, D]
 % Graticule params
-umin = Mu - deg_to_rad(5); % South of the southernmost point
-umax = deg_to_rad(90); % North of the northernmost point
-vmin = Lv - deg_to_rad(5); % West of the westernmost point
-vmax = Nv + deg_to_rad(5); % East of the easternmost point
+umin = deg_to_rad(-20); % South of the southernmost point
+umax = deg_to_rad(60); % North of the northernmost point
+vmin = deg_to_rad(210); % West of the westernmost point
+vmax = deg_to_rad(300); % East of the easternmost point
 
 uk = u1_n; % Lat of the cartographic pole
 vk = Mv; % Long of the cartographic pole
@@ -101,10 +103,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 06 [E, N, O, F, A, E]
 % Graticule params
-umin = Ou - deg_to_rad(5); % South of the southernmost point
-umax = deg_to_rad(90); % North of the northernmost point
-vmin = Nv - deg_to_rad(5); % West of the westernmost point
-vmax = deg_to_rad(365); % East of the easternmost point
+umin = deg_to_rad(-20); % South of the southernmost point
+umax = deg_to_rad(60); % North of the northernmost point
+vmin = deg_to_rad(280); % West of the westernmost point
+vmax = deg_to_rad(370); % East of the easternmost point
 
 uk = u1_n; % Lat of the cartographic pole
 vk = Ov; % Long of the cartographic pole
@@ -117,10 +119,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 07 [H, G, P, Q, I, H]
 % Graticule params
-umin = - deg_to_rad(90); % South of the southernmost point
-umax = Hu + deg_to_rad(5); % North of the northernmost point 
-vmin = Gv - deg_to_rad(5); % West of the westernmost point
-vmax = Iv + deg_to_rad(5); % East of the easternmost point
+umin = - deg_to_rad(60); % South of the southernmost point
+umax = deg_to_rad(20); % North of the northernmost point 
+vmin = deg_to_rad(30); % West of the westernmost point
+vmax = deg_to_rad(120); % East of the easternmost point
 
 uk = u1_s; % Lat of the cartographic pole
 vk = Hv; % Long of the cartographic pole
@@ -133,10 +135,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 08 [J, I, Q, R, K, J]
 % Graticule params
-umin = - deg_to_rad(90); % South of the southernmost point
-umax = Ju + deg_to_rad(5); % North of the northernmost point 
-vmin = Iv - deg_to_rad(5); % West of the westernmost point
-vmax = Kv + deg_to_rad(5); % East of the easternmost point
+umin = - deg_to_rad(60); % South of the southernmost point
+umax = deg_to_rad(20); % North of the northernmost point 
+vmin = deg_to_rad(100); % West of the westernmost point
+vmax = deg_to_rad(190); % East of the easternmost point
 
 uk = u1_s; % Lat of the cartographic pole
 vk = Jv; % Long of the cartographic pole
@@ -149,10 +151,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 09 [L, K, R, S, M, L]
 % Graticule params
-umin = - deg_to_rad(90); % South of the southernmost point
-umax = Lu + deg_to_rad(5); % North of the northernmost point 
-vmin = Kv - deg_to_rad(5); % West of the westernmost point
-vmax = Mv + deg_to_rad(5); % East of the easternmost point
+umin = - deg_to_rad(60); % South of the southernmost point
+umax = deg_to_rad(20); % North of the northernmost point 
+vmin = deg_to_rad(170); % West of the westernmost point
+vmax = deg_to_rad(260); % East of the easternmost point
 
 uk = u1_s; % Lat of the cartographic pole
 vk = Lv; % Long of the cartographic pole
@@ -165,10 +167,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 10 [N, M, S, T, O, N]
 % Graticule params
-umin = - deg_to_rad(90); % South of the southernmost point
-umax = Nu + deg_to_rad(5); % North of the northernmost point 
-vmin = Mv - deg_to_rad(5); % West of the westernmost point
-vmax = Ov + deg_to_rad(5); % East of the easternmost point
+umin = - deg_to_rad(60); % South of the southernmost point
+umax = deg_to_rad(20); % North of the northernmost point 
+vmin = deg_to_rad(240); % West of the westernmost point
+vmax = deg_to_rad(330); % East of the easternmost point
 
 uk = u1_s; % Lat of the cartographic pole
 vk = Nv; % Long of the cartographic pole
@@ -181,10 +183,10 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 
 % Face 11 [F, O, T, P, G, F]
 % Graticule params
-umin = - deg_to_rad(90); % South of the southernmost point
-umax = Fu + deg_to_rad(5); % North of the northernmost point 
-vmin = Ov - deg_to_rad(5); % West of the westernmost point
-vmax = Ov + deg_to_rad(72) + deg_to_rad(5); % East of the easternmost point
+umin = - deg_to_rad(60); % South of the southernmost point
+umax = deg_to_rad(20); % North of the northernmost point 
+vmin = deg_to_rad(320); % West of the westernmost point
+vmax = deg_to_rad(400); % East of the easternmost point
 
 uk = u1_s; % Lat of the cartographic pole
 vk = Fv; % Long of the cartographic pole
@@ -198,9 +200,9 @@ globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0,
 % Face 12 [T, S, R, Q, P, T]
 % Graticule params
 umin = - deg_to_rad(90); % South of the southernmost point
-umax = Pu + deg_to_rad(5); % North of the northernmost point
-vmin = - deg_to_rad(180); % West of the westernmost point
-vmax = deg_to_rad(180); % East of the easternmost point
+umax = deg_to_rad(-40); % North of the northernmost point
+vmin = - deg_to_rad(0); % West of the westernmost point
+vmax = deg_to_rad(360); % East of the easternmost point
 
 uk = - deg_to_rad(90); % Lat of the cartographic pole
 vk = deg_to_rad(0); % Long of the cartographic pole
