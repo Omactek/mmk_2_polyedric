@@ -208,3 +208,5 @@ vb = [Tv, Sv, Rv, Qv, Pv, Tv];
 
 subplot(3, 4, 12);
 globeFace(umin, umax, vmin, vmax, spac_u, spac_v, dens_u, dens_v, R, uk, vk, s0, proj, ub, vb);
+set(gcf, 'Renderer', 'painters'); % Matlab defaults to pixels, force vector rendering here
+print(gcf, 'faces_export.svg', '-dsvg'); % Export as svg file
