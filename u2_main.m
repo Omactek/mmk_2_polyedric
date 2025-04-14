@@ -11,7 +11,8 @@ dens_u = deg_to_rad(1);
 dens_v = dens_u;
 %M = 100000000; % Needs adjustement
 R = 6380*1000;
-Rt = 0.04;
+% height of dodecahedron = 7.5 cm
+Rt = 0.0375;
 M = R/Rt; % Probably around 159500000
 R = Rt;
 
