@@ -57,6 +57,9 @@ mpn = sqrt(double(subs(mp2, {R, u, v}, {Rn, un, vn})))
 mrn = sqrt(double(subs(mr2, {R, u, v}, {Rn, un, vn})))
 pn = double(subs(p, {R, u, v}, {Rn, un, vn}))
 
+%max angle scale
+delta_omega = 2 * asin(abs(mrn - mpn) / (mrn + mpn));
+
 %Angle between meridian and parallel
 omegan = double(subs(omega, {R, u, v}, {Rn, un, vn}))
 
@@ -108,6 +111,13 @@ hold on;
 plot(XM', YM', 'k');
 plot(XP', YP', 'k');
 axis equal
+
+us = deg_to_rad(52.6226);
+ub = [us, us, us, us, us, us];
+vb = [0, deg_to_rad(72), deg_to_rad(144), deg_to_rad(216), deg_to_rad(288), 0];
+[sb, db] = uv_sd(ub, vb, uk, vk);
+[xb, yb] = gnom(Rn, sb, db, 0);
+plot(xb, yb, "r");
 
 %Plot Tissot ellipse
 plot(xt, yt);
