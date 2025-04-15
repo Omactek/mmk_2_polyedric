@@ -112,8 +112,8 @@ plot(XM', YM', 'k');
 plot(XP', YP', 'k');
 axis equal
 
-us = deg_to_rad(52.6226);
-ub = [us, us, us, us, us, us];
+% draw boundary
+ub = [un, un, un, un, un, un];
 vb = [0, deg_to_rad(72), deg_to_rad(144), deg_to_rad(216), deg_to_rad(288), 0];
 [sb, db] = uv_sd(ub, vb, uk, vk);
 [xb, yb] = gnom(Rn, sb, db, 0);
